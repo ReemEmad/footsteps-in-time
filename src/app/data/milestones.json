@@ -1,0 +1,42 @@
+[
+  {
+    "id": "thawr-departure",
+    "order": 1,
+    "title": "Leaving the Sanctuary",
+    "locationName": "Mount Thawr",
+    "coordinates": [21.3789, 39.8579],
+    "zoom": 13,
+    "narrative": "Under the veil of deep desert dusk, the Prophet ﷺ and Abu Bakr step out from the shelter of the cave, beginning the quiet trek toward the coastal sands.",
+    "encounters": [
+      {
+        "id": "enc-abdullah-bin-urayqit",
+        "title": "The Trusted Guide",
+        "coordinates": [21.385, 39.862],
+        "brief": "Abdullah ibn Urayqit arrives with the two camels.",
+        "narrative": "A skilled navigator who knew the untraveled trails along the Red Sea coast, hired to steer clear of typical merchant routes.",
+        "tag": "encounter"
+      }
+    ]
+  },
+  {
+    "id": "coastal-passage",
+    "order": 2,
+    "title": "The Coastal Track",
+    "locationName": "Tihamah Plains",
+    "coordinates": [21.8412, 39.2215],
+    "zoom": 11,
+    "narrative": "Steering far west toward the Red Sea shoreline to evade the Quraish scouting parties scanning the main northern trade route.",
+    "encounters": [
+      {
+        "id": "enc-suraqah",
+        "title": "The Pursuit of Suraqah",
+        "subtitle": "The sinking hooves in solid sand",
+        "coordinates": [21.89, 39.26],
+        "brief": "Spurred by the bounty of 100 camels, a warrior spots the distant caravan.",
+        "narrative": "Every time Suraqah approached, his horse's legs sank deep into the firm earth as if into mire. After three attempts, he asked for safety and promised to turn pursuers away.",
+        "historicalFigure": "Suraqah ibn Malik",
+        "tag": "miracle"
+      }
+    ]
+  }
+]
