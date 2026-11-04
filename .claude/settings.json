@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/reem/footsteps-in-time; ls -a . .claude .claude/skills 2>&1 | head -40; echo ---; ls ~/.claude/skills ~/.claude/skills/synced 2>&1 | head -40; echo ---; find ~/.claude -ipath '*front*' -maxdepth 6 2>/dev/null | head)",
+      "Read(//Users/reem/.claude/skills/**)",
+      "Read(//Users/reem/.claude/**)",
+      "Bash(cd /Users/reem/.claude/plugins/marketplaces/claude-plugins-official/plugins/frontend-design; find . -type f | head; echo ---; head -20 skills/*/SKILL.md; cat /Users/reem/footsteps-in-time/.claude/settings.json)",
+      "Read(//Users/reem/.claude/plugins/marketplaces/claude-plugins-official/plugins/frontend-design/**)",
+      "Bash(mkdir -p .claude/skills)",
+      "Bash(cp -R /Users/reem/.claude/plugins/marketplaces/claude-plugins-official/plugins/frontend-design/skills/frontend-design .claude/skills/)",
+      "mcp__github__get_me",
+      "mcp__github__search_repositories",
+      "Bash(cp src/app/faviconnn.icoh.ico src/app/favicon.ico)",
+      "Bash(rm src/app/faviconnn.icoh.ico)",
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}
