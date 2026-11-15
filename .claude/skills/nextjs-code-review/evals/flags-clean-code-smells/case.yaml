@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: flags-clean-code-smells
+expected_outcome: |
+  The review flags: generic/meaningless names (x, temp, temp2, handleStuff, handleStuff2,
+  data: any); the duplicated loop filtering data for type "stop" in both handleStuff and
+  handleStuff2 that should be a shared helper; the commented-out dead function left in the
+  file; and the leftover console.log. It should recognize handleStuff is doing several
+  unrelated things (filtering, formatting, averaging, setting state, logging) at once.
+  Findings are reported under a "Clean code" heading before any fix is applied, and the
+  user is asked before changes are made since they asked to "clean up" (apply) rather than
+  just review.
+context:
+  scaffold_script: place-files.sh

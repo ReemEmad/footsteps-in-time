@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: flags-hooks-and-keys
+expected_outcome: |
+  The review flags: using the array index as the `key` on a list (visibleEvents.map) that
+  gets reordered by sort/reverse, which can cause React to mismatch list items; the
+  `handleSort` useCallback whose dependency array omits `sortDescending` even though the
+  callback body reads it, so a stale closure can use an outdated sort direction; and,
+  given this repo has the React Compiler enabled, that the manual useMemo/useCallback here
+  are likely unnecessary busywork the compiler already handles, rather than praising them
+  as a best practice. Findings are reported before any fix is applied.
+context:
+  scaffold_script: place-files.sh

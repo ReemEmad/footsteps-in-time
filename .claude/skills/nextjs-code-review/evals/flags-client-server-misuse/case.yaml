@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: flags-client-server-misuse
+expected_outcome: |
+  The review identifies that ArtifactList is marked "use client" and fetches data in a
+  useEffect purely to render a static list, when the data fetch (and most of the list
+  rendering) could happen in a Server Component, with "use client" pushed down to only the
+  small expand/collapse interaction. It also notes the whole-list loading state causes a
+  client-side fetch waterfall that server fetching would avoid. The review reports this as
+  a finding (not just a passing remark) and offers to apply a fix before changing anything.
+context:
+  scaffold_script: place-files.sh

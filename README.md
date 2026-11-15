@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Footsteps in Time
 
-## Getting Started
+A vertical-scrollytelling retelling of Islamic historical journeys — starting with the Hijrah — built as an immersive, map-anchored narrative. As the reader scrolls, a pinned map background follows the route milestone by milestone, with story cards, a glowing path of waypoints, and a synchronized timeline scrubber tracking progress through the chapter.
 
-First, run the development server:
+## Concept
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Aesthetic**: Night Desert & Amber Lantern Glow — deep indigo and charcoal tones, warm cream typography, and an amber lantern trail marking the route across a full-screen parchment-style map.
+- **Interaction**: the map viewport, active waypoint, and timeline scrubber all stay in sync as the reader scrolls through the narrative, backed by a single source of truth.
+- **Content**: each milestone carries its own narrative, location, and optional side encounters (figures, miracles, moments) tied to real coordinates along the route.
+
+## Stack
+
+- [Next.js](https://nextjs.org) (App Router)
+- [Zustand](https://zustand-demo.pmnd.rs) for the journey/scroll state (`src/app/store/useJourneyStore.tsx`)
+- Journey content as data, not hardcoded markup (`src/app/data/milestones.json`, typed in `src/app/types/journey.ts`)
+
+## Project structure
+
+```
+src/app/
+├── data/milestones.json      # Journey content: milestones + side encounters
+├── types/journey.ts          # Milestone / SideEncounter types
+├── store/useJourneyStore.tsx # Zustand store: active milestone, map focus, encounter overlay
+├── domain/page.tsx           # The journey experience (in progress)
+└── page.tsx                  # Homepage
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view it locally. The journey experience lives at `/domain` while it's in progress.
 
-## Learn More
+## Status
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Early scaffold: data model and state are in place; the scrollytelling map/UI itself is still being built.
